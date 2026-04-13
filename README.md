@@ -28,6 +28,7 @@ docker-compose up -d
 \\\
 
 ### 3. Verificación del Balanceo
+Observa en tiempo real cómo Nginx reparte las peticiones entre los nodos:
 \\\ash
 docker logs -f nginx_balancer
 \\\
@@ -36,13 +37,13 @@ docker logs -f nginx_balancer
 
 ## 📊 Detalles del Dashboard
 
-* **Trazado Técnico**: Mapa detallado del circuito de Montmeló.
-* **Calendario 2026**: Fechas clave para MotoGP, F1 y ELMS.
-* **Análisis Multimedia**: Onboards técnicos de alta velocidad.
+- **Trazado Técnico**: Mapa detallado del circuito de Montmeló.
+- **Calendario 2026**: Fechas clave para MotoGP, F1 y 24h de Barcelona.
+- **Análisis Multimedia**: Onboards técnicos de alta velocidad.
 
 ---
 
 ## 👨‍💻 Desarrollo
 
-* **Developer**: eric.alba.ramirez
-* **Docker User**: naipeer
+- **Developer**: eric.alba.ramirez
+- **Docker User**: naipeer
