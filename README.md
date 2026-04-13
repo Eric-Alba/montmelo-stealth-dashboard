@@ -1,20 +1,20 @@
-# ??? Circuit de Barcelona-Catalunya | Stealth Dashboard
+ï»¿# ğŸï¸ Circuit de Barcelona-Catalunya | Stealth Dashboard
 
-Este proyecto despliega un **Dashboard Técnico** optimizado para la monitorización del Circuit de Barcelona-Catalunya. La infraestructura está diseñada bajo un modelo de **Alta Disponibilidad** utilizando contenedores Docker.
+Este proyecto despliega un **Dashboard TÃ©cnico** optimizado para la monitorizaciÃ³n del Circuit de Barcelona-Catalunya. La infraestructura estÃ¡ diseÃ±ada bajo un modelo de **Alta Disponibilidad** utilizando contenedores Docker.
 
 ---
 
-## ??? Infraestructura y Balanceo de Carga
+## ğŸ› ï¸ Infraestructura y Balanceo de Carga
 
-El sistema utiliza una arquitectura de clúster distribuida para asegurar la disponibilidad constante:
+El sistema utiliza una arquitectura de clÃºster distribuida para asegurar la disponibilidad constante:
 
-* **Nginx Load Balancer**: Actúa como punto de entrada único, distribuyendo el tráfico mediante un algoritmo de **Round Robin**.
+* **Nginx Load Balancer**: ActÃºa como punto de entrada Ãºnico, distribuyendo el trÃ¡fico mediante un algoritmo de **Round Robin**.
 * **Nodos Apache (2 Active)**: Dos servidores web independientes que sirven el contenido de forma alterna.
-* **Live Telemetry**: Monitorización en tiempo real del estado del clúster mediante indicadores visuales.
+* **Live Telemetry**: MonitorizaciÃ³n en tiempo real del estado del clÃºster mediante indicadores visuales.
 
 ---
 
-## ?? Cómo poner las máquinas en funcionamiento
+## ğŸš€ CÃ³mo poner las mÃ¡quinas en funcionamiento
 
 ### 1. Clonar el repositorio
 \\\ash
@@ -27,22 +27,22 @@ cd montmelo-stealth-dashboard
 docker-compose up -d
 \\\
 
-### 3. Verificación del Balanceo
+### 3. VerificaciÃ³n del Balanceo
 \\\ash
 docker logs -f nginx_balancer
 \\\
 
 ---
 
-## ?? Detalles del Dashboard
+## ğŸ“Š Detalles del Dashboard
 
-- Trazado Técnico: Mapa detallado del circuito de Montmeló.
-- Calendario 2026: Fechas clave para MotoGP, F1 y ELMS.
-- Análisis Multimedia: Onboards técnicos de alta velocidad.
+* **Trazado TÃ©cnico**: Mapa detallado del circuito de MontmelÃ³.
+* **Calendario 2026**: Fechas clave para MotoGP, F1 y ELMS.
+* **AnÃ¡lisis Multimedia**: Onboards tÃ©cnicos de alta velocidad.
 
 ---
 
-## ????? Desarrollo
+## ğŸ‘¨â€ğŸ’» Desarrollo
 
-- Developer: eric.alba.ramirez
-- Docker User: naipeer
+* **Developer**: eric.alba.ramirez
+* **Docker User**: naipeer
