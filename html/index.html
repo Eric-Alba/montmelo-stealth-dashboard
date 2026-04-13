@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuit de Barcelona-Catalunya | Stealth Dashboard</title>
+    <style>
+        :root { 
+            --stealth-red: #ff003c; 
+            --bg: #0a0a0b; 
+            --panel: #16161a; 
+            --text: #e1e1e1;
+            --accent-gray: #2d2d35;
+        }
+        
+        * { box-sizing: border-box; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: var(--bg); 
+            color: var(--text); 
+            margin: 0; 
+            padding: 50px; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 50px; 
+        }
+
+        header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: flex-end;
+            border-left: 5px solid var(--stealth-red);
+            padding-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        .node-status-top {
+            font-family: monospace;
+            font-size: 0.8em;
+            background: rgba(255,0,60,0.1);
+            padding: 8px 15px;
+            border-radius: 5px;
+            border: 1px solid rgba(255,0,60,0.3);
+            color: var(--stealth-red);
+        }
+
+        .main-container {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 40px;
+        }
+
+        .panel {
+            background: var(--panel);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid var(--accent-gray);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+        }
+
+        .track-box img {
+            width: 85%;
+            filter: grayscale(1) invert(1) brightness(0.8);
+            opacity: 0.7;
+        }
+        .track-box:hover img {
+            filter: grayscale(0) invert(0);
+            opacity: 1;
+        }
+
+        .section-label {
+            color: var(--stealth-red);
+            font-size: 0.75em;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .event-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .event-card {
+            background: #000;
+            padding: 15px 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #222;
+        }
+        .event-card:hover { border-color: var(--stealth-red); transform: translateX(5px); }
+
+        .date-badge { color: var(--stealth-red); font-weight: bold; font-family: monospace; }
+
+        .video-title {
+            font-size: 1.6em;
+            font-weight: 200;
+            margin: 40px 0 20px 0;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .video-card {
+            background: #000;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #333;
+            margin-bottom: 30px;
+        }
+
+        .video-info { padding: 12px; font-size: 0.85em; font-weight: bold; background: #111; border-bottom: 1px solid #222; }
+
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+        .glow-dot { height: 8px; width: 8px; background: #00ff41; border-radius: 50%; display: inline-block; box-shadow: 0 0 10px #00ff41; margin-right: 10px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <h1 style="margin:0; font-weight: 300; font-size: 2.5em; letter-spacing: -1px;">TRAZADO DE <b style="font-weight: 900; color: var(--stealth-red);">CATALUNYA</b></h1>
+            <p style="color: #666; margin: 5px 0 0 0;">System: Optimized | User: Eric Alba</p>
+        </div>
+        <div style="text-align: right;">
+            <div class="node-status-top">
+                <span class="glow-dot"></span> CLUSTER: <b>NGINX_ACTIVE</b> | 2 NODES ONLINE
+            </div>
+            <div style="font-family: monospace; font-size: 0.8em; color: #555; margin-top: 8px;">
+                LIVE_TELEMETRY_ON | 2026_SESSION
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="panel track-box">
+            <span class="section-label">Trazado Técnico</span>
+            <center><img src="https://img2.51gt3.com/rac/track/202303/35ad041fd64f44628adaec94b0769607.png" alt="Trazado"></center>
+        </div>
+
+        <div class="panel">
+            <span class="section-label">Calendario Extendido 2026</span>
+            <div class="event-list">
+                <div class="event-card"><span>MotoGP™ Catalunya</span><span class="date-badge">17.05</span></div>
+                <div class="event-card"><span>FIM MotoJunior World Champ.</span><span class="date-badge">24.05</span></div>
+                <div class="event-card"><span>F1® Spanish GP</span><span class="date-badge">14.06</span></div>
+                <div class="event-card"><span>24h de Barcelona - Trofeo</span><span class="date-badge">12.07</span></div>
+                <div class="event-card"><span>ELMS 4H de Barcelona</span><span class="date-badge">28.08</span></div>
+                <div class="event-card"><span>World SBK® Catalunya</span><span class="date-badge">20.09</span></div>
+                <div class="event-card"><span>International GT Open</span><span class="date-badge">18.10</span></div>
+                <div class="event-card"><span>Final de Temporada</span><span class="date-badge">15.11</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h2 class="video-title">Análisis <span style="color:var(--stealth-red)">Técnico</span></h2>
+        <div class="video-card">
+            <div class="video-info">Explicación del Circuito: Trazado y Setup</div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/JeOnL1Vr9TI" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <h2 class="video-title">Una vuelta con <span style="color:var(--stealth-red)">Marc Márquez</span></h2>
+        <div class="video-card">
+            <div class="video-info">Onboard MotoGP: Marc Márquez - One lap in Montmeló</div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/Krj8XjULCcA" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <h2 class="video-title">Una vuelta con <span style="color:var(--stealth-red)">Fernando Alonso</span></h2>
+        <div class="video-card">
+            <div class="video-info">Fernando Alonso - Renault R29 Onboard</div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/1jv3feE6k1E" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <h2 class="video-title">Ultimo evento <span style="color:var(--stealth-red)">(Highlights)</span></h2>
+        <div class="video-card">
+            <div class="video-info">ELMS 4H Barcelona Highlights</div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/tpHBrWk-xrs" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer style="text-align: center; color: #333; font-size: 0.8em; padding: 50px 0; border-top: 1px solid #111;">
+        PROYECTO MONTMELÓ | INFRAESTRUCTURA DISTRIBUIDA | 2026
+    </footer>
+
+</body>
+</html>
