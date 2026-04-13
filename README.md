@@ -2,6 +2,8 @@
 
 Este proyecto despliega un **Dashboard Técnico** optimizado para la monitorización del Circuit de Barcelona-Catalunya. La infraestructura está diseñada bajo un modelo de **Alta Disponibilidad** utilizando contenedores Docker.
 
+---
+
 ## 🛠️ Infraestructura y Balanceo de Carga
 
 El sistema utiliza una arquitectura de clúster distribuida para asegurar la disponibilidad constante:
@@ -10,11 +12,13 @@ El sistema utiliza una arquitectura de clúster distribuida para asegurar la dis
 * **Nodos Apache (2 Active)**: Dos servidores web independientes. Si uno falla, el balanceador redirige el tráfico al nodo activo automáticamente.
 * **Live Telemetry**: Monitorización en tiempo real del estado del clúster.
 
+---
+
 ## 🚀 Cómo poner las máquinas en funcionamiento
 
 ### 1. Clonar el repositorio
 `ash
-git clone [https://github.com/naipeer/montmelo-stealth-dashboard.git](https://github.com/naipeer/montmelo-stealth-dashboard.git)
+git clone [https://github.com/Eric-Alba/montmelo-stealth-dashboard.git](https://github.com/Eric-Alba/montmelo-stealth-dashboard.git)
 cd montmelo-stealth-dashboard
 2. Despliegue con Docker Compose
 Levanta toda la infraestructura con un solo comando:
