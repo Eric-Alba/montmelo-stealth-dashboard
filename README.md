@@ -17,21 +17,19 @@ El sistema utiliza una arquitectura de clúster distribuida para asegurar la dis
 ## 🚀 Cómo poner las máquinas en funcionamiento
 
 ### 1. Clonar el repositorio
-\\\ash
+
 git clone https://github.com/Eric-Alba/montmelo-stealth-dashboard.git
 cd montmelo-stealth-dashboard
-\\\
 
 ### 2. Despliegue con Docker Compose
-\\\ash
+
 docker-compose up -d
-\\\
 
 ### 3. Verificación del Balanceo
 Observa en tiempo real cómo Nginx reparte las peticiones entre los nodos:
-\\\ash
+
 docker logs -f nginx_balancer
-\\\
+
 
 ---
 
