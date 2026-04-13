@@ -1,40 +1,48 @@
-Ôªø# üèéÔ∏è Circuit de Barcelona-Catalunya | Stealth Dashboard
+# ??? Circuit de Barcelona-Catalunya | Stealth Dashboard
 
-Este proyecto despliega un **Dashboard T√©cnico** optimizado para la monitorizaci√≥n del Circuit de Barcelona-Catalunya. La infraestructura est√° dise√±ada bajo un modelo de **Alta Disponibilidad** utilizando contenedores Docker.
-
----
-
-## üõ†Ô∏è Infraestructura y Balanceo de Carga
-
-El sistema utiliza una arquitectura de cl√∫ster distribuida para asegurar la disponibilidad constante:
-
-* **Nginx Load Balancer**: Act√∫a como punto de entrada √∫nico, distribuyendo el tr√°fico mediante un algoritmo de *Round Robin*.
-* **Nodos Apache (2 Active)**: Dos servidores web independientes. Si uno falla, el balanceador redirige el tr√°fico al nodo activo autom√°ticamente.
-* **Live Telemetry**: Monitorizaci√≥n en tiempo real del estado del cl√∫ster.
+Este proyecto despliega un **Dashboard TÈcnico** optimizado para la monitorizaciÛn del Circuit de Barcelona-Catalunya. La infraestructura est· diseÒada bajo un modelo de **Alta Disponibilidad** utilizando contenedores Docker.
 
 ---
 
-## üöÄ C√≥mo poner las m√°quinas en funcionamiento
+## ??? Infraestructura y Balanceo de Carga
+
+El sistema utiliza una arquitectura de cl˙ster distribuida para asegurar la disponibilidad constante:
+
+* **Nginx Load Balancer**: Act˙a como punto de entrada ˙nico, distribuyendo el tr·fico mediante un algoritmo de **Round Robin**.
+* **Nodos Apache (2 Active)**: Dos servidores web independientes que sirven el contenido de forma alterna.
+* **Live Telemetry**: MonitorizaciÛn en tiempo real del estado del cl˙ster mediante indicadores visuales.
+
+---
+
+## ?? CÛmo poner las m·quinas en funcionamiento
 
 ### 1. Clonar el repositorio
-`ash
-git clone [https://github.com/Eric-Alba/montmelo-stealth-dashboard.git](https://github.com/Eric-Alba/montmelo-stealth-dashboard.git)
+\\\ash
+git clone https://github.com/Eric-Alba/montmelo-stealth-dashboard.git
 cd montmelo-stealth-dashboard
-2. Despliegue con Docker Compose
-Levanta toda la infraestructura con un solo comando:
+\\\
 
-PowerShell
+### 2. Despliegue con Docker Compose
+\\\ash
 docker-compose up -d
-3. Verificaci√≥n del Balanceo
-Observa c√≥mo las peticiones saltan entre nodos (IPs .2 y .3) en tiempo real:
+\\\
 
-PowerShell
+### 3. VerificaciÛn del Balanceo
+\\\ash
 docker logs -f nginx_balancer
-üìä Detalles del Dashboard
-Trazado T√©cnico: Mapa detallado del circuito de Montmel√≥.
+\\\
 
-Calendario 2026: Fechas clave para MotoGP, F1 y ELMS.
+---
 
-An√°lisis Multimedia: Onboards t√©cnicos de alta velocidad.
+## ?? Detalles del Dashboard
 
-Desarrollado por: eric.alba.ramirez | Usuario Docker: naipeer
+- Trazado TÈcnico: Mapa detallado del circuito de MontmelÛ.
+- Calendario 2026: Fechas clave para MotoGP, F1 y ELMS.
+- An·lisis Multimedia: Onboards tÈcnicos de alta velocidad.
+
+---
+
+## ????? Desarrollo
+
+- Developer: eric.alba.ramirez
+- Docker User: naipeer
