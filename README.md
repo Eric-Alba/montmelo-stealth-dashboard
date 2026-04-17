@@ -4,6 +4,25 @@ Este proyecto despliega un **Dashboard Técnico** optimizado para la monitorizac
 
 ---
 
+## 📸 Evidències de Funcionament
+
+### 1. Web Funcionant
+Aquesta captura mostra el Dashboard actiu amb el mapa i la telemetria:
+![Web Funcionant](<img width="1919" height="981" alt="image" src="https://github.com/user-attachments/assets/e10cd367-61c6-4322-b07f-4159f052b0b6" />)
+
+### 2. Balanceig de Càrrega (HTTP Headers)
+Aquí es pot veure com les capçaleres identifiquen quin backend està servint la petició (Apache 1 y Apache 2).
+![Evidence Balanceig](<img width="1104" height="624" alt="image" src="https://github.com/user-attachments/assets/952aa7ad-c6c0-40ec-a185-395796ad2deb" />
+)
+
+### 3. Memòria Cau (Cache HIT/MISS)
+Evidència que el sistema de cache està configurat correctament.
+![Evidence Cache](<img width="351" height="211" alt="image" src="https://github.com/user-attachments/assets/000360c9-00c1-4e26-8bbe-402d5d488985" />)
+
+---
+
+---
+
 ## 🛠️ Infraestructura y Balanceo de Carga
 
 El sistema utiliza una arquitectura de clúster distribuida para asegurar la disponibilidad constante:
